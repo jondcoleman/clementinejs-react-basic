@@ -18,10 +18,9 @@ mongo.connect(process.env.DBURI, function (err, db) {
    app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 
    routes(app, db);
+})   
    
-      var port = 3000;
-      app.listen(process.env.PORT || port, function () {
-            console.log('Node.js listening on port ' + port + '...');
-      });
-
-});
+var port = 8080;
+app.listen(process.env.PORT || port, function () {
+    console.log('Node.js listening on port ' + port + '...');
+}); 
