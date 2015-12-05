@@ -1,3 +1,8 @@
+React Fork of the project - run gulp to transform and browserify jsx files into main.js.
+
+[App Running on Heroku](https://clementine-react.herokuapp.com/)
+
+
 # Clementine.js Boilerplate
 
 [![Join the chat at https://gitter.im/johnstonbl01/clementinejs](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/johnstonbl01/clementinejs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
