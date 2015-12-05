@@ -20,7 +20,7 @@ mongo.connect('mongodb://localhost:27017/clementinejs', function (err, db) {
    routes(app, db);
 
    app.listen(3000, function () {
-      console.log('Node.js listening on port 3000...');
+      console.log('Node.js listening on port 8000...');
    });
 
 });
