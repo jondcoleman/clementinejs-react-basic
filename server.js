@@ -6,21 +6,22 @@ var routes = require('./app/routes/index.js');
 
 var app = express();
 
-mongo.connect('mongodb://localhost:27017/clementinejs', function (err, db) {
+mongo.connect(process.env.DBURI, function (err, db) {
 
    if (err) {
       throw new Error(err);
    } else {
-      console.log('Successfully connected to MongoDB on port 27017.');
+      console.log('Successfully connected to MongoDB.');
    }
 
    app.use('/public', express.static(process.cwd() + '/public'));
    app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 
    routes(app, db);
-
-   app.listen(3000, function () {
-      console.log('Node.js listening on port 8000...');
-   });
+   
+      var port = 3000;
+      app.listen(process.env.PORT || port, function () {
+            console.log('Node.js listening on port ' + port + '...');
+      });
 
 });
