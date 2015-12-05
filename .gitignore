@@ -2,4 +2,3 @@ node_modules/
 public/lib/
 .eslintrc
 .env
-gulpfile.js
