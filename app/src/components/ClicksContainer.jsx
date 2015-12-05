@@ -11,7 +11,6 @@ module.exports = React.createClass({
 	},
 	componentWillMount: function () {
 		ajaxRequest ('GET', apiUrl, function(data){
-			console.log(JSON.parse(data));
 			this.setState({
 				clicks: JSON.parse(data).clicks
 			}) 
